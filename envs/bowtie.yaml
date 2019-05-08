@@ -1,0 +1,8 @@
+channels:
+ - bioconda
+dependencies:
+ - bowtie =1.2
+ - cutadapt =2.1
+ - samtools =1.9
+ - ucsc-twobittofa =377
+ - ucsc-fatotwobit =377
