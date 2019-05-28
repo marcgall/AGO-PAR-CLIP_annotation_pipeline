@@ -6,7 +6,10 @@ Pipeline for annotation of raw reads from AGO-PARCLIP sequence data.
 
 Everything else is downloaded as needed by snakemake.
 
-*Mac users: 'wget' must be available on the command-line.*
+*Mac users:* 
+* 'wget' must be available on the command-line.
+* PARalyzer requires Java 1.6, which is not currently available through conda for mac. Thus, you must make it available on your own machine AND, to make sure that snakemake doesn't try to download java, go to the envs/PARalyzer.yaml file and remove everything below "-bioconda".
+*(If you find a conda package for java 1.6 that is available for both linux and mac, please let me know.)*
 
 **Basic Usage**
 
