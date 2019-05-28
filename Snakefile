@@ -60,7 +60,7 @@ rule download_fastq:
     input:
         "dummy/{sample}.dummy"
     output:
-        temp("raw_data/{sample}.fastq")
+        "raw_data/{sample}.fastq"
     shell:
         """
         cd raw_data/
