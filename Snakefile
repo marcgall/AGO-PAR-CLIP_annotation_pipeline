@@ -177,7 +177,7 @@ rule download_mir_ref:
         """
         wget -c ftp://mirbase.org/pub/mirbase/CURRENT/mature.fa.gz
         gunzip -f mature.fa.gz
-        grep -A1 "Homo sapiens" mature.fa > {output}
+        grep -A1 "Homo sapiens" mature.fa > mir_ref/mature.fa
         rm mature.fa
         Rscript --vanilla scripts/fasta2csv.R mir_ref/mature.fa {output} 2> /dev/null
         """
