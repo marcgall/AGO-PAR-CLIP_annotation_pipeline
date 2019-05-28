@@ -168,6 +168,7 @@ rule calculate_index:
         """
 
 #download mature mir sequence from miRbase. Only human sequences are selected.
+#NOTE: second grep step is only relevant for older versions of grep (like on mac), to remove separators.
 rule download_mir_ref:
     output:
         "mir_ref/mature.csv"
@@ -177,7 +178,7 @@ rule download_mir_ref:
         """
         wget -c ftp://mirbase.org/pub/mirbase/CURRENT/mature.fa.gz
         gunzip -f mature.fa.gz
-        grep -A1 "Homo sapiens" mature.fa > mir_ref/mature.fa
+        grep -A1 "Homo sapiens" mature.fa | grep -v "^--$" > mir_ref/mature.fa
         rm mature.fa
         Rscript --vanilla scripts/fasta2csv.R mir_ref/mature.fa {output} 2> /dev/null
         """
