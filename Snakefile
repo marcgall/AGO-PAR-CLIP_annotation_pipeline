@@ -40,7 +40,6 @@ SAMPLES = get_samples()
 ADAPTOR = "TGGAATTCTCGGGTGCCAAGG"
 CUTADAPT_PARAMS = "-m 15"
 # Read mapping
-BOWTIE_INDEX = "/home/mlorentz/Documents/PAR-CLIP/bowtie_index/" + REFERENCE_GENOME
 BOWTIE_PARAMS = "-v 2 -m 10 --best --strata"
 # PARalyzer:
 PARALYZER_METHOD = "HAFNER_APPROACH" #Options: EXTEND_BY_READ or ADDITIONAL_NUCLEOTIDES_BEYOND_SIGNAL=#integer#
