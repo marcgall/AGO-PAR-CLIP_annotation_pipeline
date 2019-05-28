@@ -2,7 +2,7 @@ Pipeline for annotation of raw reads from AGO-PARCLIP sequence data.
 
 **Requirements**
 * Conda (from anaconda or miniconda)
-* snakemake (accessable from bioconda).
+* snakemake (accessable from the conda channel *bioconda*).
 
 Everything else is downloaded as needed by snakemake.
 
