@@ -6,6 +6,8 @@ Pipeline for annotation of raw reads from AGO-PARCLIP sequence data.
 
 Everything else is downloaded as needed by snakemake.
 
+*Mac users: 'wget' must be available on the command-line.*
+
 **Basic Usage**
 
 The basic form of the pipeline is run by the following command inside the directory: "snakemake --use-conda"
