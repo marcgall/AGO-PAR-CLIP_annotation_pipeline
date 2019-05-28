@@ -212,6 +212,7 @@ rule PARalyzer_ini:
         """
         cp {input.PARalyzer} {output}
         sed -i s/EXTEND_BY_READ/{PARALYZER_METHOD}/ {output}
+        sed -i s/GENOME_2BIT_FILE.*// {output}
         echo "GENOME_2BIT_FILE="$PWD"/bowtie_index/reference_genome/{REFERENCE_GENOME}.2bit" >> {output}
         echo "SAM_FILE="$PWD"/{input.mapped}" >> {output}
         echo "OUTPUT_CLUSTERS_FILE="$PWD"/PARalyzer/output/{wildcards.sample}.clusters.csv" >> {output}
