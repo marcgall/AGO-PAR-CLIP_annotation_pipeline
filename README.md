@@ -7,6 +7,7 @@ Pipeline for annotation of raw reads from AGO-PARCLIP sequence data.
 Everything else is downloaded as needed by snakemake.
 
 **Basic Usage**
+
 The basic form of the pipeline is run by the following command inside the directory: "snakemake --use-conda"
 This runs the whole pipeline for all SRR files specified in SRR.csv. To utilize multiple cores on your machine, use the "--cores n" argument, replacing "n" with the number of cores.
 
