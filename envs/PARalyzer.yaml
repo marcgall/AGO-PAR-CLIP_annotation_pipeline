@@ -1,4 +1,5 @@
 channels:
  - bioconda
 dependencies:
- - java-jdk =6.0.77
+ - java-jdk =8.0.112
+#6.0.77
